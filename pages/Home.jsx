@@ -1,5 +1,10 @@
-function Home() {
-  return <h1>Home Page</h1>;
-}
+import React from 'react';
 
-export default Home;
+export default function Home() {
+  return (
+    <main>
+      <h1>Welcome to My ITIS3135 React Site</h1>
+      <p>This is the Home page, built using React and Vite.</p>
+    </main>
+  );
+}

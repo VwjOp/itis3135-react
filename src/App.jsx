@@ -1,27 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Introduction from './pages/Introduction';
-import Contact from './pages/Contract';
+import Contract from './pages/Contract';
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/introduction">Introduction</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </nav>
+    <div>
+      <header>
+        <h1>ITIS3135 React 3-Page Site</h1>
+        <nav>
+          <a href="/">Home</a> |{' '}
+          <a href="/introduction">Introduction</a> |{' '}
+          <a href="/contract">Contract</a>
+        </nav>
+      </header>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/introduction" element={<Introduction />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+      <Home />
+      <Introduction />
+      <Contract />
+
+      <footer>
+        <p>&copy; 2025 Ethan Vue | ITIS3135 React Project</p>
+      </footer>
+    </div>
   );
 }
-
-export default App;
